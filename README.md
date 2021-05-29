@@ -1,0 +1,1 @@
+# codziennatranskrypcjatvpis.github.io
