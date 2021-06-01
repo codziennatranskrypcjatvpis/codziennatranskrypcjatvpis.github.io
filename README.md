@@ -1,3 +1,4 @@
+Znaczniki czasu w plikach .srt s ^e nieprawid ^bowo przesuni ^yte z przyczyn technicznych, mile widziane poprawki w pull requestach. 
 * [Wiadomosci_01.06.2021.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_01.06.2021.txt)
 * [Wiadomosci_01.06.2021.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_01.06.2021.srt)
 * [Wiadomosci_31.05.2021.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_31.05.2021.txt)
