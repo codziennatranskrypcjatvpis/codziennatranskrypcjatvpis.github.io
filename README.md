@@ -1,4 +1,6 @@
 Znaczniki czasu w plikach .srt są nieprawidłowo przesunięte z przyczyn technicznych, mile widziane poprawki w pull requestach. 
+* [Wiadomosci_06.06.2021.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_06.06.2021.txt)
+* [Wiadomosci_06.06.2021.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_06.06.2021.srt)
 * [Wiadomosci_05.06.2021.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_05.06.2021.txt)
 * [Wiadomosci_05.06.2021.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_05.06.2021.srt)
 * [Wiadomosci_04.06.2021.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_04.06.2021.txt)
