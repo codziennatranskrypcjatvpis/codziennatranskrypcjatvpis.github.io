@@ -24,7 +24,7 @@ rm README.md
 touch README.md
 echo "* [Wiadomosci_$(date +%d.%m.%Y).srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_$(date +%d.%m.%Y).srt)" | cat - lista.md | sponge lista.md
 echo "* [Wiadomosci_$(date +%d.%m.%Y).txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_$(date +%d.%m.%Y).txt)" | cat - lista.md | sponge lista.md
-echo "Znaczniki czasu w plikach .srt są nieprawidłowo przesunięte z przyczyn technicznych, mile widziane poprawki w pull requestach. " | cat - lista.md | sponge README.md
+echo "[FAQ](https://github.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/blob/main/FAQ.md)" | cat - lista.md | sponge README.md
 git add Wiadomosci_$(date +%d.%m.%Y).txt
 git add Wiadomosci_$(date +%d.%m.%Y).srt
 git add README.md
