@@ -4,4 +4,4 @@ Od strony sprzętowej: Raspberry Pi 3B i tuner DVB-T. Od strony oprogramowania: 
 # Co jeśli chcę użyć transkrypcji z tej strony do własnego projektu?
 Jak najbardziej można, zachęcam do tego i chętnie zobaczę wasze pomysły. Proszę tylko o adnotację, skąd wzięto transkrypcje oraz o poinformowanie mnie bezpośrednio na GitHubie lub pośrednio przez @FlasH'a na Wykopie o tym.
 # Jak się narodził ten projekt?
-Natrafiłem na stary post @FlasH z zapytaniem, czy ktoś umie wyciągać napisy emitowane w teletekście. Zacząłem szukać takiej możliwości i rozmawiać z nim. Ambicja i niechęć do PiSowskiej propagandy sprawiły, że w 2 dni projekt stał się gotowy.
+Natrafiłem na stary post @FlasH z zapytaniem, czy ktoś umie wyciągać napisy emitowane w teletekście. Zacząłem szukać takiej możliwości i rozmawiać z nim, 2 dni później codzienna transkrypcja ruszyła.
