@@ -1,4 +1,6 @@
 [FAQ](https://github.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/blob/main/FAQ.md)
+* [Wiadomosci_02.05.2022.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_02.05.2022.txt)
+* [Wiadomosci_02.05.2022.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_02.05.2022.srt)
 * [Wiadomosci_01.05.2022.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_01.05.2022.txt)
 * [Wiadomosci_01.05.2022.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_01.05.2022.srt)
 * [Wiadomosci_30.04.2022.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/Wiadomosci_30.04.2022.txt)
