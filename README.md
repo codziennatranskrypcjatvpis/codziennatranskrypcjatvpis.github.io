@@ -1,4 +1,6 @@
 [FAQ](https://github.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/blob/main/FAQ.md)
+* [Wiadomosci_26.11.2024.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_26.11.2024.txt)
+* [Wiadomosci_26.11.2024.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_26.11.2024.srt)
 * [Wiadomosci_25.11.2024.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_25.11.2024.txt)
 * [Wiadomosci_25.11.2024.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_25.11.2024.srt)
 * [Wiadomosci_24.11.2024.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_24.11.2024.txt)
