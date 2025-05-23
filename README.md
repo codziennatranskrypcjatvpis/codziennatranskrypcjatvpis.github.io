@@ -1,3 +1,5 @@
+* [Wiadomosci_23.05.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_23.05.2025.txt)
+* [Wiadomosci_23.05.2025.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_23.05.2025.srt)
 * [Wiadomosci_22.05.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_22.05.2025.txt)
 * [Wiadomosci_22.05.2025.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_22.05.2025.srt)
 * [Wiadomosci_21.05.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_21.05.2025.txt)
