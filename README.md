@@ -1,3 +1,5 @@
+* [Wiadomosci_02.08.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_02.08.2025.txt)
+* [Wiadomosci_02.08.2025.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_02.08.2025.srt)
 * [Wiadomosci_01.08.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_01.08.2025.txt)
 * [Wiadomosci_01.08.2025.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_01.08.2025.srt)
 * [Wiadomosci_31.07.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_31.07.2025.txt)
