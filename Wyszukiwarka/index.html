@@ -11,6 +11,7 @@ const db = new PGlite({
   extensions: { vector }
 });
 await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (transcription text, source text, date date);`);
+await db.exec(`alter table transcriptions add search tsvector generated always as (to_tsvector('english', transcription)) STORED;`);
 const inputData = (await (await fetch('https://codziennatranskrypcjatvpis.github.io/Wyszukiwarka/pliki')).text()).split("\n");
 
 const loadingDiv = document.querySelector("#loading");
@@ -26,7 +27,7 @@ async function search (phrase) {
         select source,
         string_to_array(ts_headline(transcription, websearch_to_tsquery('${phrase}'), 'MaxFragments=100, FragmentDelimiter=;DELIMITER;'), ';DELIMITER;') as occurences
         from transcriptions where
-        to_tsvector(transcription) @@ websearch_to_tsquery('${phrase}')
+        search @@ websearch_to_tsquery('${phrase}')
         order by date desc;`);
 }
 
