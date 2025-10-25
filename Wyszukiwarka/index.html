@@ -32,8 +32,8 @@ async function search (phrase) {
 
 const resultsDiv = document.querySelector("#results");
 document.querySelector("#button-addon2").addEventListener("click", function () {
-        resultsDiv.innerHTML = '';
         loadingDiv.classList.remove("d-none");
+        resultsDiv.innerHTML = '';
 	search(document.querySelector("#input").value).then(result => {
         const virtualDiv = document.createElement('div');
         result.rows.forEach(row => {
@@ -41,9 +41,10 @@ document.querySelector("#button-addon2").addEventListener("click", function () {
                 div.className = 'col-lg-12';
                 const h = document.createElement('h3');
                 const anchor = document.createElement('a');
-                anchor.href = row.source;
-                anchor.innerText = row.source + " (" + row.occurences.length + ")";
+                anchor.href = 'https://codziennatranskrypcjatvpis.github.io/transcriptions_txt/' + row.source;
+                anchor.innerText = row.source;
                 h.appendChild(anchor);
+		h.appendChild(document.createTextNode(" (" + row.occurences.length + ")"));
                 div.appendChild(h);
                 row.occurences.forEach(o => {
                         const blockquote = document.createElement('blockquote');
