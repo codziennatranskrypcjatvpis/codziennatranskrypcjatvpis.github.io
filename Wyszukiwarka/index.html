@@ -10,49 +10,52 @@ import { vector } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/v
 const db = new PGlite({
   extensions: { vector }
 });
-await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (transcription text, source text);`);
+await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (transcription text, source text, date date);`);
 const inputData = (await (await fetch('https://codziennatranskrypcjatvpis.github.io/Wyszukiwarka/pliki')).text()).split("\n");
 
 const loadingDiv = document.querySelector("#loading");
 inputData.forEach(async (text, i) => {
-  await db.query(`INSERT INTO transcriptions (transcription, source) VALUES ($1, $2);`, [text.substring(26, text.length), text.substring(0, 25)]);
-//  loadingDiv.innerText = (i/inputData.length * 100);
+  if (text == "") return;
+  const date = text.substring(17, 21) + "-" + text.substring(14, 16) + "-" + text.substring(11, 13);
+  await db.query(`INSERT INTO transcriptions (transcription, source, date) VALUES ($1, $2, $3);`, [text.substring(26, text.length), text.substring(0, 25), date]);
 });
 loadingDiv.classList.add("d-none");
 
 async function search (phrase) {
-	return await db.query(`
-	select source, 
-	string_to_array(ts_headline(transcription, websearch_to_tsquery('${phrase}'), 'MaxFragments=100, FragmentDelimiter=;DELIMITER;'), ';DELIMITER;') as occurences
-	from transcriptions where 
-	to_tsvector(transcription) @@ websearch_to_tsquery('${phrase}');
-	`);
+        return await db.query(`
+        select source,
+        string_to_array(ts_headline(transcription, websearch_to_tsquery('${phrase}'), 'MaxFragments=100, FragmentDelimiter=;DELIMITER;'), ';DELIMITER;') as occurences
+        from transcriptions where
+        to_tsvector(transcription) @@ websearch_to_tsquery('${phrase}')
+        order by date desc;`);
 }
+
 const resultsDiv = document.querySelector("#results");
-document.querySelector("#button-addon2").addEventListener("click", async function () {
+document.querySelector("#button-addon2").addEventListener("click", function () {
         resultsDiv.innerHTML = '';
         loadingDiv.classList.remove("d-none");
-	const result = await search(document.querySelector("#input").value);
-	loadingDiv.classList.add("d-none");
-	const virtualDiv = document.createElement('div');
-	result.rows.forEach(row => {
-		const div = document.createElement('div');
-		div.className = 'col-lg-12';
-		const h = document.createElement('h3');
-		const anchor = document.createElement('a');
-		anchor.href = row.source;
-		anchor.innerText = row.source + " (" + row.occurences.length + ")";
-		h.appendChild(anchor);
-		div.appendChild(h);
-		row.occurences.forEach(o => {
-			const blockquote = document.createElement('blockquote');
-			blockquote.className = 'blockquote';
-			blockquote.innerHTML = o;
-			div.appendChild(blockquote);
-		});
-		virtualDiv.appendChild(div);
+	search(document.querySelector("#input").value).then(result => {
+        const virtualDiv = document.createElement('div');
+        result.rows.forEach(row => {
+                const div = document.createElement('div');
+                div.className = 'col-lg-12';
+                const h = document.createElement('h3');
+                const anchor = document.createElement('a');
+                anchor.href = row.source;
+                anchor.innerText = row.source + " (" + row.occurences.length + ")";
+                h.appendChild(anchor);
+                div.appendChild(h);
+                row.occurences.forEach(o => {
+                        const blockquote = document.createElement('blockquote');
+                        blockquote.className = 'blockquote';
+                        blockquote.innerHTML = o;
+                        div.appendChild(blockquote);
+                });
+                virtualDiv.appendChild(div);
+        });
+        loadingDiv.classList.add("d-none");
+        resultsDiv.innerHTML = virtualDiv.innerHTML;
 	});
-	resultsDiv.innerHTML = virtualDiv.innerHTML;
 });
 
 </script>
