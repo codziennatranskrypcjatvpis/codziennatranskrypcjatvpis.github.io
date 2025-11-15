@@ -1,3 +1,5 @@
+* [Wiadomosci_15.11.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_15.11.2025.txt)
+* [Wiadomosci_15.11.2025.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_15.11.2025.srt)
 * [Wiadomosci_14.11.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_14.11.2025.txt)
 * [Wiadomosci_14.11.2025.srt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_srt/Wiadomosci_14.11.2025.srt)
 * [Wiadomosci_13.11.2025.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_13.11.2025.txt)
