@@ -14,7 +14,7 @@ const db = new PGlite({
 await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (source text, date date, transcription text);`);
 const blob = await (await fetch('https://codziennatranskrypcjatvpis.github.io/Wyszukiwarka/pliki')).blob();
 await db.query(
-          `COPY transcriptions FROM '/dev/blob' WITH DELIMITER ';;;;;' CSV;`,
+          `COPY transcriptions FROM '/dev/blob' WITH DELIMITER '~' CSV;`,
           [],
           {
             blob,
