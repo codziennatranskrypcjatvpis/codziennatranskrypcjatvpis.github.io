@@ -11,7 +11,7 @@ import { vector } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/v
 const db = new PGlite({
   extensions: { vector }
 });
-await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (source text, date date, transcription text);`);
+await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (date date, source text, transcription text);`);
 const blob = await (await fetch('https://codziennatranskrypcjatvpis.github.io/Wyszukiwarka/pliki')).blob();
 await db.query(
           `COPY transcriptions FROM '/dev/blob' WITH DELIMITER '~' CSV;`,
