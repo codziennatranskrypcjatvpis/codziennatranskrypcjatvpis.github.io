@@ -5,21 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <script type="module">
+const loadingDiv = document.querySelector("#loading");
 import { PGlite } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js';
 import { vector } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/vector/index.js';
 const db = new PGlite({
   extensions: { vector }
 });
-await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (transcription text, source text, date date);`);
+await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (source text, date date, transcription text);`);
+const blob = await fetch('https://codziennatranskrypcjatvpis.github.io/Wyszukiwarka/pliki')).blob();
+await db.query(
+          `COPY transcriptions FROM '/dev/blob' WITH DELIMITER ';;;;;' CSV;`,
+          [],
+          {
+            blob,
+          }
+        );
 await db.exec(`alter table transcriptions add search tsvector generated always as (to_tsvector('english', transcription)) STORED;`);
-const inputData = (await (await fetch('https://codziennatranskrypcjatvpis.github.io/Wyszukiwarka/pliki')).text()).split("\n");
-
-const loadingDiv = document.querySelector("#loading");
-inputData.forEach(async (text, i) => {
-  if (text == "") return;
-  const date = text.substring(17, 21) + "-" + text.substring(14, 16) + "-" + text.substring(11, 13);
-  await db.query(`INSERT INTO transcriptions (transcription, source, date) VALUES ($1, $2, $3);`, [text.substring(26, text.length), text.substring(0, 25), date]);
-});
 loadingDiv.classList.add("d-none");
 
 async function search (phrase) {
