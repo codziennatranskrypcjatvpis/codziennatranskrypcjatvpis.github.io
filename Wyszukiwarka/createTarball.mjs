@@ -14,5 +14,4 @@ await db.query(
         );
 await db.exec(`alter table transcriptions add search tsvector generated always as (to_tsvector('english', transcription)) STORED;`);
 const file = await db.dumpDataDir();
-console.log(file);
 fs.writeFileSync(file.name, Buffer.from(await file.arrayBuffer()));
