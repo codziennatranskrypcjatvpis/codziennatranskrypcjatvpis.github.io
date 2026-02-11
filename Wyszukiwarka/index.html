@@ -8,7 +8,7 @@
 const loadingDiv = document.querySelector("#loading");
 import { PGlite } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js';
 import { vector } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/vector/index.js';
-const blob = await (await fetch('https://adorable-van-vleck.s3.waw.io.cloud.ovh.net/pgdata.tar.gz')).blob();
+const blob = await (await fetch('https://adorable-van-vleck.s3.waw.io.cloud.ovh.net/pgdata.tar')).blob();
 const db = new PGlite({
   extensions: { vector },
   loadDataDir: blob
