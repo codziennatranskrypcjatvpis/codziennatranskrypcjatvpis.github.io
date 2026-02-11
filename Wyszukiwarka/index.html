@@ -8,19 +8,11 @@
 const loadingDiv = document.querySelector("#loading");
 import { PGlite } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js';
 import { vector } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/vector/index.js';
+const blob = await (await fetch('https://adorable-van-vleck.s3.waw.io.cloud.ovh.net/pgdata.tar.gz')).blob();
 const db = new PGlite({
-  extensions: { vector }
+  extensions: { vector },
+  loadDataDir: blob
 });
-await db.exec(`CREATE TABLE IF NOT EXISTS transcriptions (date date, source text, transcription text);`);
-const blob = await (await fetch('https://codziennatranskrypcjatvpis.github.io/Wyszukiwarka/pliki')).blob();
-await db.query(
-          `COPY transcriptions FROM '/dev/blob' WITH DELIMITER '~' CSV;`,
-          [],
-          {
-            blob,
-          }
-        );
-await db.exec(`alter table transcriptions add search tsvector generated always as (to_tsvector('english', transcription)) STORED;`);
 loadingDiv.classList.add("d-none");
 
 async function search (phrase) {
