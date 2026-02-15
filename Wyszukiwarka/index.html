@@ -6,8 +6,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <script type="module">
 const loadingDiv = document.querySelector("#loading");
-import { PGlite } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js';
-import { vector } from 'https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/vector/index.js';
+import { PGlite } from 'https://adorable-van-vleck.s3.waw.io.cloud.ovh.net/pglite/dist/index.js';
+import { vector } from 'https://adorable-van-vleck.s3.waw.io.cloud.ovh.net/pglite/dist/vector/index.js';
 const blob = await (await fetch('https://adorable-van-vleck.s3.waw.io.cloud.ovh.net/pgdata.tar')).blob();
 const db = new PGlite({
   extensions: { vector },
@@ -18,9 +18,9 @@ loadingDiv.classList.add("d-none");
 async function search (phrase) {
         return await db.query(`
         select source,
-        string_to_array(ts_headline(transcription, websearch_to_tsquery('${phrase}'), 'MaxFragments=100, FragmentDelimiter=;DELIMITER;'), ';DELIMITER;') as occurences
+        string_to_array(ts_headline(transcription, websearch_to_tsquery('polish', '${phrase}'), 'MaxFragments=100, FragmentDelimiter=;DELIMITER;'), ';DELIMITER;') as occurences
         from transcriptions where
-        search @@ websearch_to_tsquery('${phrase}')
+        search @@ websearch_to_tsquery('polish', '${phrase}')
         order by date desc;`);
 }
 
