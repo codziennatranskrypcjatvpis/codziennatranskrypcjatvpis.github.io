@@ -18,7 +18,7 @@ loadingDiv.classList.add("d-none");
 async function search (phrase) {
         return await db.query(`
         select source,
-        string_to_array(ts_headline(transcription, websearch_to_tsquery('polish', '${phrase}'), 'MaxFragments=100, FragmentDelimiter=;DELIMITER;'), ';DELIMITER;') as occurences
+        string_to_array(ts_headline('polish', transcription, websearch_to_tsquery('polish', '${phrase}'), 'MaxFragments=100, FragmentDelimiter=;DELIMITER;'), ';DELIMITER;') as occurences
         from transcriptions where
         search @@ websearch_to_tsquery('polish', '${phrase}')
         order by date desc;`);
