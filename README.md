@@ -1,3 +1,5 @@
+* [Wiadomosci_18.02.2026.txt](/transcriptions_txt/Wiadomosci_18.02.2026.txt)
+* [Wiadomosci_18.02.2026.srt](/transcriptions_srt/Wiadomosci_18.02.2026.srt)
 * [Wiadomosci_17.02.2026.txt](/transcriptions_txt/Wiadomosci_17.02.2026.txt)
 * [Wiadomosci_17.02.2026.srt](/transcriptions_srt/Wiadomosci_17.02.2026.srt)
 * [Wiadomosci_16.02.2026.txt](https://raw.githubusercontent.com/codziennatranskrypcjatvpis/codziennatranskrypcjatvpis.github.io/main/transcriptions_txt/Wiadomosci_16.02.2026.txt)
