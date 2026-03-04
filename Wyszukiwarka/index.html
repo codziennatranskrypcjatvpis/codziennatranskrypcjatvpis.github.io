@@ -28,6 +28,7 @@ const resultsDiv = document.querySelector("#results");
 document.querySelector("#button-addon2").addEventListener("click", function () {
         loadingDiv.classList.remove("d-none");
         resultsDiv.innerHTML = '';
+	setTimeout(() =>
 	search(document.querySelector("#input").value).then(result => {
         const virtualDiv = document.createElement('div');
         result.rows.forEach(row => {
@@ -51,6 +52,7 @@ document.querySelector("#button-addon2").addEventListener("click", function () {
         loadingDiv.classList.add("d-none");
         resultsDiv.innerHTML = virtualDiv.innerHTML;
 	});
+	}, 100);
 });
 
 </script>
