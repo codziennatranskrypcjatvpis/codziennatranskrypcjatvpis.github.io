@@ -5,5 +5,8 @@ grep -E "[A-Za-z]" transcriptions_srt/Wiadomosci_$(date +%d.%m.%Y).srt | tr '\r\
 echo "* [Wiadomosci_$(date +%d.%m.%Y).srt](/transcriptions_srt/Wiadomosci_$(date +%d.%m.%Y).srt)" | cat - README.md | sponge README.md
 echo "* [Wiadomosci_$(date +%d.%m.%Y).txt](/transcriptions_txt/Wiadomosci_$(date +%d.%m.%Y).txt)" | cat - README.md | sponge README.md
 echo "$(date +%Y-%m-%d)~Wiadomosci_$(date +%d.%m.%Y).txt~$(cat transcriptions_txt/Wiadomosci_$(date +%d.%m.%Y).txt)" >> Wyszukiwarka/pliki
+npx github-readme-to-html
+head -n -2 dist/index.html > index.html
+echo '<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script></body></html>' >> index.html
 ./push_to_git.sh
 cd Wyszukiwarka && /var/lib/tvheadend/.volta/bin/node createTarball.mjs && ./copy_to_s3.sh
