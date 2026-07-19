@@ -1,3 +1,5 @@
+* [Wiadomosci_19.07.2026.txt](/transcriptions_txt/Wiadomosci_19.07.2026.txt)
+* [Wiadomosci_19.07.2026.srt](/transcriptions_srt/Wiadomosci_19.07.2026.srt)
 * [Wiadomosci_18.07.2026.txt](/transcriptions_txt/Wiadomosci_18.07.2026.txt)
 * [Wiadomosci_18.07.2026.srt](/transcriptions_srt/Wiadomosci_18.07.2026.srt)
 * [Wiadomosci_17.07.2026.txt](/transcriptions_txt/Wiadomosci_17.07.2026.txt)
